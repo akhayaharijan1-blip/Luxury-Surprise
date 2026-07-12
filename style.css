@@ -1560,3 +1560,115 @@ body{
     transition:opacity .8s ease;
 
 }
+/* ==========================================================
+   SCENE 02
+========================================================== */
+
+#scene-02{
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.name-glow{
+
+    width:240px;
+
+    height:240px;
+
+    margin:0 auto 40px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(212,175,55,.22),
+    transparent 70%);
+
+    animation:nameGlow 5s ease-in-out infinite;
+
+}
+
+.scene-label{
+
+    color:var(--gold-light);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+}
+
+.receiver-name{
+
+    font-family:'Cinzel',serif;
+
+    font-size:clamp(42px,8vw,78px);
+
+    color:#fff;
+
+    margin-bottom:28px;
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+}
+
+.scene-message{
+
+    max-width:620px;
+
+    margin:auto;
+
+    color:#c9c9c9;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    opacity:0;
+
+}
+
+.gold-line{
+
+    width:0;
+
+    height:2px;
+
+    margin:45px auto 0;
+
+    background:linear-gradient(90deg,
+    transparent,
+    var(--gold),
+    transparent);
+
+}
+
+@keyframes nameGlow{
+
+    0%{
+
+        transform:scale(.95);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(.95);
+
+    }
+
+}
