@@ -149,7 +149,7 @@ function goToScene(index){
 if(currentScene===1){
 
     playSceneTwo();
-
+pulseReceiverName();
 }
     scheduleNext();
 
@@ -485,5 +485,56 @@ function playSceneTwo(){
         );
 
     },1200);
+
+}
+/* ==========================================================
+   Scene 02 Glow Effect
+========================================================== */
+
+function pulseReceiverName(){
+
+    const name = document.getElementById("receiverName");
+
+    if(!name) return;
+
+    name.animate(
+
+        [
+
+            {
+
+                transform:"scale(1)",
+
+                textShadow:"0 0 0px rgba(212,175,55,.2)"
+
+            },
+
+            {
+
+                transform:"scale(1.03)",
+
+                textShadow:"0 0 30px rgba(212,175,55,.8)"
+
+            },
+
+            {
+
+                transform:"scale(1)",
+
+                textShadow:"0 0 0px rgba(212,175,55,.2)"
+
+            }
+
+        ],
+
+        {
+
+            duration:2800,
+
+            iterations:Infinity
+
+        }
+
+    );
 
 }
