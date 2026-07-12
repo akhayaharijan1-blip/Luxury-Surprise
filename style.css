@@ -1049,3 +1049,160 @@ body{
 }
 
 }
+/* ==========================================================
+   SCENE 01
+   Luxury Aura
+========================================================== */
+
+.golden-aura{
+
+    position:relative;
+
+    width:260px;
+
+    height:260px;
+
+    margin:0 auto 60px;
+
+}
+
+.center-core{
+
+    position:absolute;
+
+    inset:50% auto auto 50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:linear-gradient(145deg,#fff4be,#d4af37);
+
+    box-shadow:
+    0 0 35px rgba(212,175,55,.9),
+    0 0 100px rgba(212,175,55,.35);
+
+}
+
+.aura-ring{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    border:1px solid rgba(212,175,55,.25);
+
+}
+
+.ring-one{
+
+    animation:auraPulse 5s linear infinite;
+
+}
+
+.ring-two{
+
+    transform:scale(.82);
+
+    animation:auraPulse 5s linear infinite 1.4s;
+
+}
+
+.ring-three{
+
+    transform:scale(.64);
+
+    animation:auraPulse 5s linear infinite 2.8s;
+
+}
+
+@keyframes auraPulse{
+
+    0%{
+
+        opacity:.9;
+
+        transform:scale(.7);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(1.25);
+
+    }
+
+}
+
+/* Floating Lights */
+
+.floating-lights{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.light{
+
+    position:absolute;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#f5d36b;
+
+    box-shadow:0 0 15px #f5d36b;
+
+    animation:floatLight linear infinite;
+
+}
+
+.l1{left:10%;top:85%;animation-duration:10s;}
+.l2{left:22%;top:95%;animation-duration:8s;}
+.l3{left:45%;top:90%;animation-duration:12s;}
+.l4{left:68%;top:88%;animation-duration:9s;}
+.l5{left:82%;top:94%;animation-duration:11s;}
+.l6{left:92%;top:86%;animation-duration:13s;}
+
+@keyframes floatLight{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-110vh);
+
+        opacity:0;
+
+    }
+
+}
