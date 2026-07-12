@@ -146,7 +146,11 @@ function goToScene(index){
     currentScene = index;
 
     scenes[currentScene].classList.add("active");
+if(currentScene===1){
 
+    playSceneTwo();
+
+}
     scheduleNext();
 
 }
