@@ -1541,3 +1541,22 @@ body{
     }
 
 }
+/* ==========================================================
+   Transition Glow Upgrade
+========================================================== */
+
+.transition-glow{
+
+    opacity:0;
+
+    transition:opacity .8s ease;
+
+    mix-blend-mode:screen;
+
+}
+
+.transition-overlay{
+
+    transition:opacity .8s ease;
+
+}
