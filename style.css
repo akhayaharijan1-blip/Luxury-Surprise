@@ -1,0 +1,287 @@
+/* =========================================================
+   GIFTEVER - Luxury Surprise
+   Production CSS
+   Part 1
+========================================================= */
+
+/* ===========================
+   RESET
+=========================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#090909;
+
+    color:#ffffff;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+}
+
+/* ===========================
+   ROOT
+=========================== */
+
+:root{
+
+    --gold:#d4af37;
+
+    --gold-light:#f7dc8a;
+
+    --gold-dark:#8b6914;
+
+    --white:#ffffff;
+
+    --bg:#090909;
+
+    --bg2:#101010;
+
+    --glass:rgba(255,255,255,.05);
+
+    --transition:.55s ease;
+
+}
+
+/* ===========================
+   APP
+=========================== */
+
+#app{
+
+    width:100%;
+
+    min-height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+#background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-5;
+
+}
+
+.bg-gradient{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,175,55,.12),
+    transparent 45%),
+
+    radial-gradient(circle at bottom,
+    rgba(255,255,255,.02),
+    transparent 60%),
+
+    #090909;
+
+}
+
+.bg-noise{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.05;
+
+    background-image:
+    radial-gradient(#ffffff 1px,transparent 1px);
+
+    background-size:5px 5px;
+
+}
+
+.bg-light{
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,.08);
+
+    filter:blur(120px);
+
+    left:50%;
+
+    top:10%;
+
+    transform:translateX(-50%);
+
+}
+
+/* ===========================
+   SCENE
+=========================== */
+
+.scene{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.scene.active{
+
+    display:flex;
+
+}
+
+/* ===========================
+   WRAPPER
+=========================== */
+
+.scene-wrapper{
+
+    width:100%;
+
+    max-width:1200px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:40px 0;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.top-logo{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.top-logo p{
+
+    font-family:'Cinzel',serif;
+
+    font-size:20px;
+
+    letter-spacing:8px;
+
+    color:var(--gold-light);
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    width:100%;
+
+    max-width:720px;
+
+    text-align:center;
+
+}
+
+.hero-subtitle{
+
+    color:#d8d8d8;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+}
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:clamp(42px,7vw,72px);
+
+    line-height:1.15;
+
+    font-weight:700;
+
+}
+
+.hero h1 span{
+
+    display:block;
+
+    color:var(--gold-light);
+
+    margin-top:10px;
+
+}
+
+.hero-description{
+
+    max-width:560px;
+
+    margin:35px auto;
+
+    line-height:1.9;
+
+    color:#bdbdbd;
+
+    font-size:17px;
+
+}
