@@ -110,3 +110,145 @@ document.addEventListener("keydown",(e)=>{
     }
 
 });
+/* ==========================================================
+   SCRIPT PART 2
+   Scene Controller
+========================================================== */
+
+const sceneDuration = [
+    0,      // Scene 1 (manual)
+    5000,   // Scene 2
+    6000,   // Scene 3
+    6000,   // Scene 4
+    7000,   // Scene 5
+    7000,   // Scene 6
+    12000,  // Scene 7 (video)
+    7000,   // Scene 8
+    7000,   // Scene 9
+    8000,   // Scene 10
+    7000,   // Scene 11
+    7000,   // Scene 12
+    0       // Scene 13
+];
+
+let autoTimer = null;
+
+/* ==========================================================
+   GO TO SCENE
+========================================================== */
+
+function goToScene(index){
+
+    if(index < 0 || index >= scenes.length) return;
+
+    scenes[currentScene].classList.remove("active");
+
+    currentScene = index;
+
+    scenes[currentScene].classList.add("active");
+
+    scheduleNext();
+
+}
+
+/* ==========================================================
+   NEXT
+========================================================== */
+
+function nextScene(){
+
+    if(currentScene >= scenes.length - 1){
+
+        clearTimeout(autoTimer);
+
+        return;
+
+    }
+
+    transition.style.opacity = "1";
+
+    setTimeout(()=>{
+
+        goToScene(currentScene + 1);
+
+        transition.style.opacity = "0";
+
+    },700);
+
+}
+
+/* ==========================================================
+   AUTO NEXT
+========================================================== */
+
+function scheduleNext(){
+
+    clearTimeout(autoTimer);
+
+    const duration = sceneDuration[currentScene];
+
+    if(duration <= 0) return;
+
+    autoTimer = setTimeout(()=>{
+
+        nextScene();
+
+    },duration);
+
+}
+
+/* ==========================================================
+   KEYBOARD SHORTCUTS
+========================================================== */
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="ArrowRight"){
+
+        nextScene();
+
+    }
+
+    if(e.key==="ArrowLeft"){
+
+        if(currentScene>0){
+
+            goToScene(currentScene-1);
+
+        }
+
+    }
+
+});
+
+/* ==========================================================
+   MUSIC FADE
+========================================================== */
+
+function fadeMusic(targetVolume,duration){
+
+    const start = bgMusic.volume;
+
+    const step = 50;
+
+    const totalSteps = duration/step;
+
+    let currentStep = 0;
+
+    const fade = setInterval(()=>{
+
+        currentStep++;
+
+        bgMusic.volume = start +
+
+        ((targetVolume-start)/totalSteps)*currentStep;
+
+        if(currentStep>=totalSteps){
+
+            clearInterval(fade);
+
+        }
+
+    },step);
+
+}
