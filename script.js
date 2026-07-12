@@ -252,3 +252,12 @@ function fadeMusic(targetVolume,duration){
     },step);
 
 }
+/* ==========================================================
+   Scene 01 Entrance
+========================================================== */
+
+window.addEventListener("load",()=>{
+
+    document.body.classList.add("loaded");
+
+});
