@@ -59,29 +59,7 @@ playLuxuryTransition();
    NEXT SCENE
 ========================================================== */
 
-function nextScene(){
 
-    if(currentScene >= scenes.length-1) return;
-
-    transition.style.opacity = "1";
-
-    setTimeout(()=>{
-
-        scenes[currentScene].classList.remove("active");
-
-        currentScene++;
-
-        scenes[currentScene].classList.add("active");
-
-    },700);
-
-    setTimeout(()=>{
-
-        transition.style.opacity = "0";
-
-    },1200);
-
-}
 
 /* ==========================================================
    OPTIONAL AUTO NEXT
