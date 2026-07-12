@@ -261,3 +261,44 @@ window.addEventListener("load",()=>{
     document.body.classList.add("loaded");
 
 });
+/* ==========================================================
+   Luxury Button Ripple
+========================================================== */
+
+beginButton.addEventListener("pointerdown", () => {
+
+    beginButton.animate(
+
+        [
+
+            {
+
+                transform:"scale(1)"
+
+            },
+
+            {
+
+                transform:"scale(.94)"
+
+            },
+
+            {
+
+                transform:"scale(1)"
+
+            }
+
+        ],
+
+        {
+
+            duration:280,
+
+            easing:"ease-out"
+
+        }
+
+    );
+
+});
