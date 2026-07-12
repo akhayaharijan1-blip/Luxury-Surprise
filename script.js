@@ -372,3 +372,114 @@ function playLuxuryTransition(){
     },900);
 
 }
+/* ==========================================================
+   SCENE 02 ANIMATION
+========================================================== */
+
+function playSceneTwo(){
+
+    const name=document.getElementById("receiverName");
+
+    const msg=document.querySelector(".scene-message");
+
+    const line=document.querySelector(".gold-line");
+
+    name.animate(
+
+        [
+
+            {
+
+                opacity:0,
+
+                transform:"translateY(35px)"
+
+            },
+
+            {
+
+                opacity:1,
+
+                transform:"translateY(0)"
+
+            }
+
+        ],
+
+        {
+
+            duration:1200,
+
+            fill:"forwards",
+
+            easing:"ease"
+
+        }
+
+    );
+
+    setTimeout(()=>{
+
+        msg.animate(
+
+            [
+
+                {
+
+                    opacity:0
+
+                },
+
+                {
+
+                    opacity:1
+
+                }
+
+            ],
+
+            {
+
+                duration:900,
+
+                fill:"forwards"
+
+            }
+
+        );
+
+    },700);
+
+    setTimeout(()=>{
+
+        line.animate(
+
+            [
+
+                {
+
+                    width:"0"
+
+                },
+
+                {
+
+                    width:"220px"
+
+                }
+
+            ],
+
+            {
+
+                duration:900,
+
+                fill:"forwards"
+
+            }
+
+        );
+
+    },1200);
+
+}
