@@ -302,3 +302,20 @@ beginButton.addEventListener("pointerdown", () => {
     );
 
 });
+/* ==========================================================
+   Smooth Entrance
+========================================================== */
+
+window.addEventListener("load",()=>{
+
+    document.body.style.opacity="0";
+
+    requestAnimationFrame(()=>{
+
+        document.body.style.transition="opacity 1.2s ease";
+
+        document.body.style.opacity="1";
+
+    });
+
+});
