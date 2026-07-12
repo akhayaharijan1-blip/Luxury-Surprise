@@ -1206,3 +1206,170 @@ body{
     }
 
 }
+/* ==========================================================
+   Luxury Crystal Button
+========================================================== */
+
+#beginExperience{
+
+    overflow:hidden;
+
+}
+
+.button-shine{
+
+    position:absolute;
+
+    width:60px;
+
+    height:220%;
+
+    top:-60%;
+
+    left:-120px;
+
+    transform:rotate(25deg);
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.45),
+
+    transparent
+
+    );
+
+    animation:shineMove 3.8s infinite;
+
+}
+
+@keyframes shineMove{
+
+    from{
+
+        left:-120px;
+
+    }
+
+    to{
+
+        left:240px;
+
+    }
+
+}
+
+.button-particles{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.button-particles span{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:var(--gold-light);
+
+    box-shadow:0 0 12px var(--gold-light);
+
+    animation:buttonSpark 2.6s infinite;
+
+}
+
+.button-particles span:nth-child(1){
+
+    left:20%;
+
+    bottom:20%;
+
+}
+
+.button-particles span:nth-child(2){
+
+    right:18%;
+
+    bottom:30%;
+
+    animation-delay:.5s;
+
+}
+
+.button-particles span:nth-child(3){
+
+    left:45%;
+
+    top:25%;
+
+    animation-delay:1s;
+
+}
+
+.button-particles span:nth-child(4){
+
+    right:35%;
+
+    top:18%;
+
+    animation-delay:1.5s;
+
+}
+
+@keyframes buttonSpark{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0) scale(.5);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-18px) scale(1.4);
+
+    }
+
+}
+
+#beginExperience:active{
+
+    transform:scale(.96);
+
+}
+
+.button-core{
+
+    transition:.25s;
+
+}
+
+#beginExperience:hover .button-core{
+
+    transform:scale(1.08);
+
+}
