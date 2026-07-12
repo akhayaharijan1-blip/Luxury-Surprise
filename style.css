@@ -622,3 +622,430 @@ body{
 }
 
 }
+/* =========================================================
+   SCENE 6 - 13
+========================================================= */
+
+.section-badge{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.03);
+
+    color:var(--gold-light);
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    margin-bottom:28px;
+
+}
+
+.scene-title{
+
+    font-family:'Cinzel',serif;
+
+    font-size:clamp(38px,7vw,70px);
+
+    line-height:1.2;
+
+    text-align:center;
+
+    color:#fff;
+
+    margin-bottom:25px;
+
+}
+
+.scene-description{
+
+    width:min(650px,90%);
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#c8c8c8;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+/* ==========================
+   MEMORY GRID
+========================== */
+
+.memory-grid{
+
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+    width:100%;
+
+    max-width:950px;
+
+}
+
+.memory-card{
+
+    height:260px;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.12);
+
+    transition:.45s;
+
+}
+
+.memory-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(212,175,55,.45);
+
+}
+
+.memory-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* ==========================
+   VIDEO
+========================== */
+
+.video-frame{
+
+    width:min(900px,100%);
+
+    margin-top:50px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    border:2px solid rgba(212,175,55,.18);
+
+    box-shadow:0 0 60px rgba(212,175,55,.08);
+
+}
+
+.video-frame video{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* ==========================
+   GOLDEN WISH
+========================== */
+
+.wish-circle{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    margin-bottom:45px;
+
+    position:relative;
+
+    border:2px solid rgba(212,175,55,.35);
+
+}
+
+.wish-glow{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(212,175,55,.35),
+    transparent 70%);
+
+    animation:goldPulse 3s infinite;
+
+}
+
+/* ==========================
+   CANDLE
+========================== */
+
+.candle{
+
+    width:12px;
+
+    height:120px;
+
+    background:#f4e6a2;
+
+    margin-bottom:35px;
+
+    position:relative;
+
+}
+
+.flame{
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    background:#ffd84f;
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:-20px;
+
+    box-shadow:0 0 25px #ffd84f;
+
+    animation:flicker .18s infinite alternate;
+
+}
+
+/* ==========================
+   CELEBRATION
+========================== */
+
+.celebration-light{
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(212,175,55,.30),
+    transparent 70%);
+
+    margin-bottom:30px;
+
+}
+
+.celebration-stars{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:40px;
+
+}
+
+.celebration-stars span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--gold-light);
+
+    box-shadow:0 0 20px var(--gold-light);
+
+}
+
+/* ==========================
+   FINAL MESSAGE
+========================== */
+
+.message-box{
+
+    width:min(700px,95%);
+
+    padding:45px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(212,175,55,.15);
+
+    backdrop-filter:blur(15px);
+
+}
+
+/* ==========================
+   ENDING
+========================== */
+
+.ending-glow{
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    margin-bottom:40px;
+
+    background:radial-gradient(circle,
+    rgba(212,175,55,.25),
+    transparent 70%);
+
+}
+
+/* ==========================
+   BRAND
+========================== */
+
+.brand-logo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:48px;
+
+    letter-spacing:10px;
+
+    color:var(--gold-light);
+
+}
+
+.brand-line{
+
+    margin-top:18px;
+
+    color:#b5b5b5;
+
+    letter-spacing:2px;
+
+    text-align:center;
+
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes goldPulse{
+
+    0%{
+
+        transform:scale(.8);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.8);
+
+        opacity:.4;
+
+    }
+
+}
+
+@keyframes flicker{
+
+    from{
+
+        transform:translateX(-50%) scale(1);
+
+    }
+
+    to{
+
+        transform:translateX(-50%) scale(.9);
+
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.memory-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.memory-card{
+
+    height:230px;
+
+}
+
+.scene-title{
+
+    font-size:38px;
+
+}
+
+.scene-description{
+
+    font-size:15px;
+
+}
+
+.message-box{
+
+    padding:30px;
+
+}
+
+.brand-logo{
+
+    font-size:34px;
+
+    letter-spacing:6px;
+
+}
+
+}
