@@ -48,7 +48,7 @@ function startExperience(){
     },700);
 
     setTimeout(()=>{
-
+playLuxuryTransition();
         nextScene();
 
     },2200);
@@ -319,3 +319,56 @@ window.addEventListener("load",()=>{
     });
 
 });
+/* ==========================================================
+   Luxury Transition Effect
+========================================================== */
+
+const transitionGlow = document.querySelector(".transition-glow");
+
+function playLuxuryTransition(){
+
+    transition.style.opacity = "1";
+
+    transition.style.transition = "opacity .8s ease";
+
+    transitionGlow.style.opacity = "1";
+
+    transitionGlow.animate(
+
+        [
+
+            {
+                transform:"translate(-50%,-50%) scale(.5)",
+                opacity:0
+            },
+
+            {
+                transform:"translate(-50%,-50%) scale(1.4)",
+                opacity:1
+            },
+
+            {
+                transform:"translate(-50%,-50%) scale(2)",
+                opacity:0
+            }
+
+        ],
+
+        {
+
+            duration:900,
+
+            easing:"ease-out"
+
+        }
+
+    );
+
+    setTimeout(()=>{
+
+        transition.style.opacity="0";
+        transitionGlow.style.opacity="0";
+
+    },900);
+
+}
