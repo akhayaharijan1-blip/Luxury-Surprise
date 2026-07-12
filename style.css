@@ -285,3 +285,340 @@ body{
     font-size:17px;
 
 }
+/* =========================================================
+   BUTTON
+========================================================= */
+
+#beginExperience{
+
+    position:relative;
+
+    margin-top:40px;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    transition:transform .35s ease;
+
+}
+
+#beginExperience:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.button-core{
+
+    width:96px;
+
+    height:96px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(145deg,#f7dc8a,#d4af37);
+
+    color:#111;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    box-shadow:
+    0 0 25px rgba(212,175,55,.45),
+    0 0 60px rgba(212,175,55,.18);
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.button-ring{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    border-radius:50%;
+
+    animation:ringPulse 2.8s infinite;
+
+}
+
+.button-glow{
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(212,175,55,.30),
+    transparent 70%);
+
+    filter:blur(18px);
+
+}
+
+#beginExperience span{
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-weight:500;
+
+}
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.small-note{
+
+    margin-top:28px;
+
+    color:#9b9b9b;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.bottom-text{
+
+    color:#777;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    text-align:center;
+
+}
+
+/* =========================================================
+   TRANSITION LAYER
+========================================================= */
+
+#transition-layer{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:999;
+
+    overflow:hidden;
+
+}
+
+.transition-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    background:#090909;
+
+}
+
+.transition-glow{
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,.18);
+
+    filter:blur(140px);
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    opacity:0;
+
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes ringPulse{
+
+    0%{
+
+        transform:scale(.9);
+
+        opacity:1;
+
+    }
+
+    70%{
+
+        transform:scale(1.25);
+
+        opacity:.15;
+
+    }
+
+    100%{
+
+        transform:scale(1.35);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.button-core{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:768px){
+
+.hero{
+
+    max-width:100%;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero-description{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+.hero-subtitle{
+
+    font-size:12px;
+
+}
+
+.button-core{
+
+    width:82px;
+
+    height:82px;
+
+    font-size:28px;
+
+}
+
+.button-ring{
+
+    width:105px;
+
+    height:105px;
+
+}
+
+#beginExperience span{
+
+    font-size:15px;
+
+}
+
+.top-logo p{
+
+    letter-spacing:6px;
+
+    font-size:16px;
+
+}
+
+.bottom-text{
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+}
